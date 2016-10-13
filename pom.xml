@@ -180,9 +180,9 @@
             </plugin>
 
             <plugin>
-                <groupId>com.sample.plugin</groupId>
-                <artifactId>javadoc-adword-plugin</artifactId>
-                <version>1.0-RELEASE</version>
+                <groupId>uno.anahata</groupId>
+                <artifactId>hiranya</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
