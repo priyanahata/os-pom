@@ -240,8 +240,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <!--<outputDirectory>target/temp/${project.artifactId}</outputDirectory>-->
-                            <outputDirectory>/var/www/os/${project.artifactId}</outputDirectory>
+                            <outputDirectory>target/temp/${project.artifactId}</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>target/staging/${project.artifactId}</directory>
