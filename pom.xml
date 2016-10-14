@@ -8,10 +8,10 @@
  
     <!--<url>http://git.anahata.uno/anahata-pom</url>-->
     <distributionManagement>
-     <site>
-       <id>${project.artifactId}-site</id>
-       <url>http://localhost</url>
-     </site>
+        <site>
+            <id>${project.artifactId}-site</id>
+            <url>http://localhost</url>
+        </site>
     </distributionManagement>
     <licenses>
         <license>
@@ -98,7 +98,7 @@
             </snapshots>
         </repository>
 
-<!--        <repository>
+        <!--        <repository>
             <id>anahata</id>
             <name>Anahata Private Enterprise Repository</name>
             <url>http://repo.anahata.uno/artifactory/anahata-private/</url>
@@ -120,7 +120,7 @@
             </snapshots>
         </pluginRepository>
 
-<!--        <pluginRepository>
+        <!--        <pluginRepository>
             <id>anahata</id>
             <name>Anahata Private Enterprise Repository</name>
             <url>http://artifactory.anahata-it.com.au/artifactory/anahata-private/</url>
@@ -208,7 +208,7 @@
                 </executions>
             </plugin>
 
-<!--            
+            <!--            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -228,7 +228,31 @@
                 </executions>
             </plugin>
             -->
+        
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>/var/www/os/${project.artifactId}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>target/staging/${project.artifactId}</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+        
     </build>
 
     <!-- Note, the following reporting section is deprecated in maven 3.x
