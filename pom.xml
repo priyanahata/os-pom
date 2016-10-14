@@ -241,7 +241,7 @@
                         </goals>
                         <configuration>
                             <!--<outputDirectory>target/temp/${project.artifactId}</outputDirectory>-->
-                            <outputDirectory>../../../../../../../www/os/${project.artifactId}</outputDirectory>
+                            <outputDirectory>../../../../../../www/os/${project.artifactId}</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>target/staging/${project.artifactId}</directory>
