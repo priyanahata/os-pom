@@ -10,7 +10,7 @@
     <distributionManagement>
         <site>
             <id>${project.artifactId}-site</id>
-            <url>http://localhost</url>
+            <url>file:////var/www/os</url>
         </site>
     </distributionManagement>
     <licenses>
