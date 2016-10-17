@@ -10,7 +10,8 @@
     <distributionManagement>
         <site>
             <id>${project.artifactId}-site</id>
-            <url>file:////var/www/os</url>
+            <!--<url>file:////var/www/os</url>-->
+            <url>http://localhost</url>
         </site>
     </distributionManagement>
     <licenses>
@@ -235,12 +236,12 @@
                 <executions>
                     <execution>
                         <id>copy-resources</id>
-                        <phase>package</phase>
+                        <phase>site</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>target/temp/${project.artifactId}</outputDirectory>
+                            <outputDirectory>target/temp/${project.artifactId}/${project.version}</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>target/staging/${project.artifactId}</directory>
