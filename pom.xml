@@ -209,29 +209,28 @@
                 </executions>
             </plugin>
 
-            <!--            
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8</version>
+                <groupId>uno.anahata</groupId>
+                <artifactId>gitpush</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
                 <executions>
                     <execution>
+                        <id>default-cli</id>
                         <goals>
-                            <goal>javadoc</goal>
-                            <goal>test-javadoc</goal>
+                            <goal>gitpush</goal>
                         </goals>
-                        <phase>site</phase>
-                        <configuration>     
-                            <additionalparam>-Xdoclint:none</additionalparam>                                                   
-                            <failOnError>false</failOnError>                                                       
+                        <configuration>
+                            <checkoutPath>../../${project.artifactId}_bitbucket/workspace</checkoutPath>
+                            <sitePath>target/staging/${project.artifactId}</sitePath>
+                            <repository>${project.artifactId}.bitbucket.org.git</repository>
+                            <repoUrl>ssh://git@bitbucket.org/anahata/</repoUrl>
+                            <project></project>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-            -->
-        
         </plugins>
-        
+
     </build>
 
     <!-- Note, the following reporting section is deprecated in maven 3.x
@@ -287,7 +286,7 @@
                         <executions>
                             <execution>
                                 <id>publish-resources-versioned</id>
-                                <phase>package</phase>
+                                <phase>post-site</phase>
                                 <goals>
                                     <goal>copy-resources</goal>
                                 </goals>
@@ -303,7 +302,7 @@
                             </execution>
                             <execution>
                                 <id>publish-resources-latest</id>
-                                <phase>package</phase>
+                                <phase>post-site</phase>
                                 <goals>
                                     <goal>copy-resources</goal>
                                 </goals>
