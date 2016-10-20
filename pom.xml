@@ -220,7 +220,8 @@
                             <goal>gitpush</goal>
                         </goals>
                         <configuration>
-                            <checkoutPath>../../${project.artifactId}_bitbucket/workspace</checkoutPath>
+                            <checkoutPath>/opt/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>
+                            <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
                             <repository>${project.artifactId}.bitbucket.org.git</repository>
                             <repoUrl>ssh://git@bitbucket.org/anahata/</repoUrl>
