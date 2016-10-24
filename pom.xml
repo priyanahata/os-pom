@@ -193,7 +193,7 @@
                             <javaDocFolder>/site/</javaDocFolder>
                             <adWordsScript>Replace content with google ads</adWordsScript>
                             <donateWithPaypal>Donate With Paypal</donateWithPaypal>
-                            <headerContent>Anahata Header </headerContent>
+                            <headerContent>../../../../header.html</headerContent>
                             <footerContent>Anahata Footer </footerContent>
                             <backLinks>
                                 <backLink>
