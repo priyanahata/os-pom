@@ -193,7 +193,7 @@
                             <javaDocFolder>/site/</javaDocFolder>
                             <adWordsScript>Replace content with google ads</adWordsScript>
                             <donateWithPaypal>Donate With Paypal</donateWithPaypal>
-                            <headerContent>../../../../header.html</headerContent>
+                            <headerContent>../../../header.html</headerContent>
                             <footerContent>Anahata Footer </footerContent>
                             <backLinks>
                                 <backLink>
@@ -222,7 +222,7 @@
                             <goal>gitpush</goal>
                         </goals>
                         <configuration>
-                            <checkoutPath>/opt/anahata-os-docs/${project.artifactId}_docs</checkoutPath>
+                                <checkoutPath>/opt/anahata-os-docs/${project.artifactId}_docs</checkoutPath>
                             <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
                             <repository>${project.artifactId}.bitbucket.org.git</repository>
