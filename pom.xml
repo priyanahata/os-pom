@@ -190,9 +190,11 @@
                             <goal>rundoc</goal>
                         </goals>
                         <configuration>
-                            <javaDocFolder>/site/apidocs/</javaDocFolder>
+                            <javaDocFolder>/site/</javaDocFolder>
                             <adWordsScript>Replace content with google ads</adWordsScript>
                             <donateWithPaypal>Donate With Paypal</donateWithPaypal>
+                            <headerContent>Anahata Header </headerContent>
+                            <footerContent>Anahata Footer </footerContent>
                             <backLinks>
                                 <backLink>
                                     <anchorText>Anahata</anchorText>
@@ -220,7 +222,7 @@
                             <goal>gitpush</goal>
                         </goals>
                         <configuration>
-                            <checkoutPath>../../anahata_os_docs/${project.artifactId}_docs</checkoutPath>
+                            <checkoutPath>/opt/anahata_os_docs/${project.artifactId}_docs</checkoutPath>
                             <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
                             <repository>${project.artifactId}.bitbucket.org.git</repository>
