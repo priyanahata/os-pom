@@ -179,7 +179,29 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-
+<!--
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>/home/ambasoft/Desktop/trial/${project.artifactId}/${project.parent.artifactId}/site</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.parent.basedir}/src/</directory>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+-->
             <plugin>
                 <groupId>uno.anahata</groupId>
                 <artifactId>hiranya</artifactId>
@@ -208,6 +230,16 @@
                             <project></project>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>sitecopy</id>
+                        <goals>
+                            <goal>sitecopy</goal>
+                        </goals>
+                        <configuration>
+                            <siteFolder>src/site</siteFolder>
+                            <project></project>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
 
@@ -222,7 +254,7 @@
                             <goal>gitpush</goal>
                         </goals>
                         <configuration>
-                                <checkoutPath>/opt/anahata-os-docs/${project.artifactId}_docs</checkoutPath>
+                            <checkoutPath>/opt/anahata-os-docs/${project.artifactId}_docs</checkoutPath>
                             <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
                             <repository>${project.artifactId}.bitbucket.org.git</repository>
@@ -291,7 +323,7 @@
                                 <id>publish-resources-versioned</id>
                                 <phase>post-site</phase>
                                 <goals>
-                                    <goal>copy-resources</goal>
+                                    <goal>copy-resources/</goal>
                                 </goals>
                                 <configuration>
                                     <outputDirectory>../../anahata-website/workspace/${project.artifactId}/${project.version}</outputDirectory>

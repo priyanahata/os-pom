@@ -1,0 +1,49 @@
+<project name="Mapacho">
+
+<skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.5</version>
+</skin>
+
+
+<bannerLeft>
+    <name>Mapacho</name>
+    <src>images/logo.png</src>
+    <href>http://www.anahata.net.au/</href>
+  </bannerLeft>
+ 
+  <bannerRight>
+    <src>images/Logos_Mapacho_04_1.JPG</src>
+    <href>http://www.anahata.net.au/</href>
+  </bannerRight>
+
+  <poweredBy>
+    <logo name="Maven" href="http://maven.apache.org/"
+          img="http://maven.apache.org/images/logos/maven-feather.png"/>
+  </poweredBy>
+
+
+<publishDate position="right"/>
+<version position="right"/>
+
+<body>
+
+      <links>
+        <item name="Anahata" href="http://www.anahata.net.au"/>
+    </links>
+        <menu ref="parent"/>
+        <menu ref="modules"/>
+	<menu ref="reports"/>
+
+</body>
+
+<!--
+<custom>
+    <fluidoSkin>
+      <topBarEnabled>false</topBarEnabled>
+      <sideBarEnabled>true</sideBarEnabled>
+    </fluidoSkin>
+  </custom>
+-->
+</project>
