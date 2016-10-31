@@ -216,7 +216,7 @@
                             <adWordsScript>Replace content with google ads</adWordsScript>
                             <donateWithPaypal>Donate With Paypal</donateWithPaypal>
                             <headerContent>../../../header.html</headerContent>
-                            <footerContent>Anahata Footer </footerContent>
+                            <footerContent>../../../footer.html</footerContent>
                             <backLinks>
                                 <backLink>
                                     <anchorText>Anahata</anchorText>
