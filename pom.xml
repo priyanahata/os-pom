@@ -99,14 +99,15 @@
             </snapshots>
         </repository>
 
-        <!--        <repository>
+        <repository>
             <id>anahata</id>
             <name>Anahata Private Enterprise Repository</name>
-            <url>http://repo.anahata.uno/artifactory/anahata-private/</url>
+            <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </repository>-->
+        </repository>
+        
     </repositories>
 
     <pluginRepositories>
@@ -121,14 +122,14 @@
             </snapshots>
         </pluginRepository>
 
-        <!--        <pluginRepository>
+        <pluginRepository>
             <id>anahata</id>
             <name>Anahata Private Enterprise Repository</name>
-            <url>http://artifactory.anahata-it.com.au/artifactory/anahata-private/</url>
+            <url>http://artifactory.anahata-it.com.au/artifactory/anahata-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </pluginRepository>-->
+        </pluginRepository>
     </pluginRepositories>
 
     <build>
@@ -179,29 +180,29 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-<!--
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.1</version>
-                <executions>
-                    <execution>
-                        <phase>pre-site</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>/home/ambasoft/Desktop/trial/${project.artifactId}/${project.parent.artifactId}/site</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${project.parent.basedir}/src/</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
--->
+            <!--
+                        <plugin>
+                            <artifactId>maven-resources-plugin</artifactId>
+                            <version>3.0.1</version>
+                            <executions>
+                                <execution>
+                                    <phase>pre-site</phase>
+                                    <goals>
+                                        <goal>copy-resources</goal>
+                                    </goals>
+                                    <configuration>
+                                        <outputDirectory>/home/ambasoft/Desktop/trial/${project.artifactId}/${project.parent.artifactId}/site</outputDirectory>
+                                        <resources>
+                                            <resource>
+                                                <directory>${project.parent.basedir}/src/</directory>
+                                                <filtering>true</filtering>
+                                            </resource>
+                                        </resources>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
+            -->
             <plugin>
                 <groupId>uno.anahata</groupId>
                 <artifactId>hiranya</artifactId>
