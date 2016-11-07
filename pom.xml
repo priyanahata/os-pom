@@ -256,6 +256,7 @@
                         </goals>
                         <configuration>
                             <checkoutPath>/opt/anahata-os-docs/${project.artifactId}</checkoutPath>
+                            <osDocsFolder>/opt/opensource/${project.artifactId}</osDocsFolder>
                             <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
                             <repository>${project.artifactId}.bitbucket.org.git</repository>
