@@ -246,18 +246,21 @@
 
             <plugin>
                 <groupId>uno.anahata</groupId>
-                <artifactId>gitpush</artifactId>
+                <artifactId>kamadhenu</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <id>default-cli</id>
                         <goals>
-                            <goal>gitpush</goal>
+                            <goal>publish</goal>
                         </goals>
                         <configuration>
                             <checkoutPath>/opt/anahata-os-docs/${project.artifactId}</checkoutPath>
                             <osDocsFolder>/home/wwwtesta/opensource/${project.artifactId}</osDocsFolder>
-                            <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}_docs/</checkoutPath>-->
+                            <prodHost>103.241.3.141</prodHost>
+                            <prodUser>wwwtests</prodUser>
+                            <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}</checkoutPath>
+                            <osDocsFolder>/home/ambasoft/Desktop/opensource/${project.artifactId}</osDocsFolder>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
                             <repository>${project.artifactId}.bitbucket.org.git</repository>
                             <repoUrl>ssh://git@bitbucket.org/anahata/</repoUrl>
