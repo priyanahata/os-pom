@@ -258,7 +258,7 @@
                             <checkoutPath>/opt/anahata-os-docs/${project.artifactId}</checkoutPath>
                             <osDocsFolder>/home/wwwtesta/opensource/${project.artifactId}</osDocsFolder>
                             <prodHost>103.241.3.141</prodHost>
-                            <prodUser>wwwtests</prodUser>
+                            <prodUser>wwwtesta</prodUser>
                             <!--<checkoutPath>/home/ambasoft/Desktop/anahata-os-docs/${project.artifactId}</checkoutPath>
                             <osDocsFolder>/home/ambasoft/Desktop/opensource/${project.artifactId}</osDocsFolder>-->
                             <sitePath>target/staging/${project.artifactId}</sitePath>
