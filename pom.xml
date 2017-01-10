@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.anahata.os</groupId>
+    <groupId>uno.anahata</groupId>
     <artifactId>anahata-os-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
  
-    <!--<url>http://git.anahata.uno/anahata-pom</url>-->
+<!--    <url>http://git.anahata.uno/anahata-os-pom</url>-->
     <distributionManagement>
         <site>
             <id>${project.artifactId}-site</id>
@@ -24,15 +24,15 @@
     </licenses>
     
     <organization>
-        <name>Anahata Technologies Pty Ltd</name>
+        <name>Anahata</name>
         <url>http://www.anahata.uno/</url>
     </organization>
 
     <developers>
         <developer>
             <name>Pablo Rodriguez Pina</name>
-            <email>pablo@anahata-it.com.au</email>
-            <organization>Anahata Technologies Pty Ltd</organization>
+            <email>pablo@anahata.uno</email>
+            <organization>Anahata</organization>
             <organizationUrl>http://www.anahata.uno</organizationUrl>
             <roles>
                 <role>developer</role>
@@ -40,19 +40,9 @@
         </developer>
         
         <developer>
-            <name>Vijay Simha</name>
-            <email>vijay@anahata-it.com.au</email>
-            <organization>Anahata Technologies Pty Ltd</organization>
-            <organizationUrl>http://www.anahata-it.com.au/</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-        </developer>
-        
-        <developer>
-            <name>Goran Lochert</name>
-            <email>goran@anahata-it.com.au</email>
-            <organization>Anahata Technologies Pty Ltd</organization>
+            <name>Ambarish Mohan</name>
+            <email>ambarish@anahata.uno</email>
+            <organization>Anahata</organization>
             <organizationUrl>http://www.anahata.uno</organizationUrl>
             <roles>
                 <role>developer</role>
@@ -125,7 +115,7 @@
         <pluginRepository>
             <id>anahata</id>
             <name>Anahata Private Enterprise Repository</name>
-            <url>http://artifactory.anahata-it.com.au/artifactory/anahata-public/</url>
+            <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -163,9 +153,9 @@
                 <version>1.7</version>
                 <configuration>
                     <licenseName>apache_v2</licenseName>
-                    <organizationName><![CDATA[<A HREF="http://www.anahata.uno">Anahata Technologies Pty Ltd</A>]]></organizationName>
+                    <organizationName><![CDATA[<A HREF="http://www.anahata.uno">Anahata</A>]]></organizationName>
                     <lineLength>120</lineLength>
-                    <inceptionYear>2012</inceptionYear>
+                    <inceptionYear>2016</inceptionYear>
                     <projectName>${project.name}</projectName>
                 </configuration>
             </plugin>  
@@ -221,11 +211,11 @@
                             <backLinks>
                                 <backLink>
                                     <anchorText>Anahata</anchorText>
-                                    <href>http://www.anahata.com.au</href>
+                                    <href>http://www.anahata.uno</href>
                                 </backLink>
                                 <backLink>
-                                    <anchorText>Anahata Developers</anchorText>
-                                    <href>http://www.anahata.com.au/our-team.html</href>
+                                    <anchorText>Java Developers</anchorText>
+                                    <href>http://www.anahata.uno/our-team.html</href>
                                 </backLink>
                             </backLinks>
                             <project></project>
