@@ -6,7 +6,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
  
-<!--    <url>http://git.anahata.uno/anahata-os-pom</url>-->
+    <!--    <url>http://git.anahata.uno/anahata-os-pom</url>-->
     <distributionManagement>
         <site>
             <id>${project.artifactId}-site</id>
@@ -53,15 +53,11 @@
     
     <ciManagement>
         <system>Jenkins</system>
-        <url>http://ci.anahata.uno/job/anahata-pom</url>
+        <url>http://ci.anahata.uno/job/anahata-os-pom</url>
     </ciManagement>
 
     <!-- versions of libraries used in maven plugins which don't see the right version on the class path -->
     <properties>
-        <eclipselink.version>2.6.3</eclipselink.version>
-        <jrebel.version>1.1.6</jrebel.version>
-        <weld.version>2.2.13.Final</weld.version>
-        <hibernate-validator.version>5.1.2.Final</hibernate-validator.version>                
         <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
         <BUILD_NUMBER>LOCAL</BUILD_NUMBER>
@@ -91,7 +87,7 @@
 
         <repository>
             <id>anahata</id>
-            <name>Anahata Private Enterprise Repository</name>
+            <name>Anahata Public Enterprise Repository</name>
             <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
             <snapshots>
                 <enabled>true</enabled>
@@ -111,10 +107,19 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        
+        <pluginRepository>
+            <id>sonatype-snapshots</id>
+            <name>sonatype-snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
 
         <pluginRepository>
             <id>anahata</id>
-            <name>Anahata Private Enterprise Repository</name>
+            <name>Anahata Public Enterprise Repository</name>
             <url>http://repo.anahata.uno/artifactory/anahata-public/</url>
             <snapshots>
                 <enabled>true</enabled>
@@ -150,7 +155,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>license-maven-plugin</artifactId>
-                <version>1.7</version>
+                <version>1.10</version>
                 <configuration>
                     <licenseName>apache_v2</licenseName>
                     <organizationName><![CDATA[<A HREF="http://www.anahata.uno">Anahata</A>]]></organizationName>
@@ -163,7 +168,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.6.0</version>
 
                 <configuration>
                     <source>${java.version}</source>
@@ -198,7 +203,7 @@
                 <artifactId>hiranya</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
                 <executions>
-                    <execution>
+<!--                    <execution>
                         <goals>
                             <goal>rundoc</goal>
                         </goals>
@@ -220,7 +225,7 @@
                             </backLinks>
                             <project></project>
                         </configuration>
-                    </execution>
+                    </execution>-->
                     <execution>
                         <id>sitecopy</id>
                         <goals>
@@ -259,6 +264,15 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.6</version>
+                <configuration>
+                </configuration>                        
+            </plugin>
+            
         </plugins>
 
     </build>
@@ -280,7 +294,7 @@
                     <failOnError>false</failOnError>
                 </configuration>
             </plugin>
-
+            
             
             <!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
