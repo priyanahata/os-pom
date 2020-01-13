@@ -273,6 +273,10 @@
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
+                                <configuration>
+                                    <failOnError>false</failOnError>
+                                    <footer>Messi is the greatest of all times</footer>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
